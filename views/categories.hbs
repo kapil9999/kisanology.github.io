@@ -1,0 +1,116 @@
+
+<link href="carousel.css" rel="stylesheet">
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color:powderblue;
+  }
+
+
+  .header {
+    overflow: hidden;
+    background-color: rgb(174, 133, 133);
+    padding: 20px 10px;
+  }
+
+
+  .container {
+    margin-top: 40px;
+    height: 650px;
+    width: 100%;
+
+  }
+
+  .column {
+
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 400px;
+    margin-bottom: 30px;
+    float: left;
+    margin-left: 62px;
+    border-radius: 8px;
+  }
+
+  .column img{
+    width: 100%;
+  }
+
+  .add-category-btn{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .add-category-btn button{
+    background: green;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    font-weight: bold;
+    
+  }
+
+  .add-category-btn a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .search-form{
+    margin-left: auto;
+  }
+
+  .category-name a{
+    text-decoration: none;
+    font-weight: normal;
+    text-shadow: none;
+    text-decoration: none;
+  }
+</style>
+
+
+<div class="main">
+  <div class="header" >
+    <h1>
+      <center>Sub Categories</center>
+    </h1>
+  </div>
+  <div class="add-category-btn" id="add-category-btn">
+    <button><a href="/create-crop-category/{{cropId}}">Add New Category</a></button>
+  </div>
+</div>
+
+
+
+{{#each categories}}
+<div class="column" style="margin-left: 30px;">
+    <center>
+      <img width="400" height="300"
+        src="{{image}}">
+    </center>
+    <center>
+      <br>
+      <p class="category-name"><a href="/category-info/{{_id}}">{{name}}
+    </center></a></p>
+    </center>
+    <center><a></a></center>
+</div>
+{{/each}}
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+
+
+<script>
+
+  if(!localStorage.getItem('authToken'))
+    document.getElementById('add-category-btn').hidden=true
+</script>
+

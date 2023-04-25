@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add New FAQ</title>
+	<link rel="stylesheet" type="text/css" href="/css/add-faq.css">
+</head>
+<body>
+	<h1 class="form-title">Add New FAQ</h1>
+
+	<form action="/faq" method="POST" class="faq-form">
+		<label for="question">Question:</label>
+		<input type="text" id="question" name="question" required>
+
+		<label for="answer">Answer:</label>
+		<textarea id="answer" name="answer" required></textarea>
+
+		<input type="submit" value="Submit" class="submit-button">
+	</form>
+
+	<a href="/faq" class="back-link">Back to FAQ</a>
+</body>
+</html>

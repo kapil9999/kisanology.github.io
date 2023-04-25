@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FAQ</title>
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+</head>
+<body>
+	<h1 class="faq-title">Frequently Asked Questions</h1>
+    <div class="faqs-container">
+        {{#each faqs}}
+            <div class="faq">
+                <h2 class="faq-question">Q:&nbsp;&nbsp;{{question}}</h2>
+                <p class="faq-answer">A:&nbsp;&nbsp;{{answer}}</p>
+            </div>
+        {{/each}}
+    </div>
+	<a href="/faq/add" class="add-faq-link">Add a new FAQ</a>
+</body>
+</html>

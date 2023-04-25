@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/css/posts.css">
+
+<div class="posts">
+    <h1>{{post.question}}</h1>
+    <p class="timestamp">Posted on {{formatDate post.createdAt}}</p>
+    <div class="post">
+        <h2>Answers:</h2>
+        {{#each post.answers}}
+            <div class="post-answer">
+                <p>{{this.answer}}</p>
+                <p style="color: gray;">Answered by: {{this.user}}</p>
+            </div>
+        {{/each}}
+    </div>
+    <form method="POST" action="/posts/{{post._id}}/answers" id="answer-form">
+        <div>
+            <input name="reqToken" hidden id="token-field" />
+            <label for="answer">Add an answer:</label>
+            <textarea id="answer" name="answer" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <a href="/posts" class="back-link">Back to all posts</a>
+
+    <script>
+
+        if (!localStorage.getItem("authToken")) {
+            document.getElementById("answer-form").hidden = true;
+        } else {
+            document.getElementById('token-field').value=localStorage.getItem("authToken")
+        }
+    </script>
+</div>

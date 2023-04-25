@@ -1,0 +1,143 @@
+
+  
+
+
+
+  <style>
+   * {
+      box-sizing: border-box;
+    }
+
+    body{
+      background-color:powderblue;"
+    }
+  
+    .header {
+      overflow: hidden;
+      background-color: rgb(174, 133, 133);
+      padding: 20px 10px;
+    }
+
+
+    .container {
+
+
+
+      margin-top: 40px;
+      height: 650px;
+      width: 100%;
+
+    }
+
+    .column {
+
+      background-color: rgb(255, 255, 255);
+      width: 30%;
+      height: 400px;
+      margin-bottom: 30px ;
+      float: left;
+      margin-left: 62px;
+      padding-right: 73px;
+
+
+    }
+
+    .navbar{
+        position: relative;
+    }
+
+    .category-info-wrapper{
+        text-align: center;
+    }
+
+    .category-head{
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .category-head h1{
+        display: block;
+        color: white;
+        height: 2rem;        
+        margin-bottom: 3rem;
+        color: black;
+        margin-left: 2rem;
+
+    }
+
+    .category-head img{
+      border-radius: 10px;
+    }
+
+    .category-info{
+        margin: 4rem auto;
+        font-size: 1.5rem;
+        width: 80%;
+        
+    }
+
+    .category-table{
+
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .category-table td,.category-table th {
+        border: 1px solid black;
+        padding: .5rem;
+    }
+
+    
+   
+  </style>
+    <div class="category-info-wrapper">
+        <div class="category-head">
+            <img width="400" height="300" src="{{categoryImage}}">
+            <h1>{{category.name}}</h1>
+        </div>
+
+        <div class="category-info">
+            <p>{{category.short_info}}</p>
+        </div>
+
+        <div class="category-table">
+            <table>
+                <tr>
+                    <th>
+                        Sr. No
+                    </th>
+                    <th>
+                        Attribute
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+
+                {{#each category}}
+                    <tr>
+                        <th>
+                            {{inc @index}}
+                        </th>
+                        <th>
+                            {{keyToAttr @key}}
+                        </th>
+                        <th>
+                            {{this}}
+                        </th>
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+

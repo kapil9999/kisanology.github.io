@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/posts.css">
+<div class="posts">
+    <h1>Help Forum</h1>
+    {{#each posts}}
+    <div class="post">
+        <h2>{{question}}</h2>
+        {{#each answers}}
+        <div class="post-answer">
+            <p>{{this.answer}}</p>
+            <p style="color: gray;">Answered by: {{this.user}}</p>
+        </div>
+        {{/each}}
+        <p class="timestamp">{{formatDate created_at}}</p>
+        <a href="/posts/{{_id}}">View</a>
+    </div>
+    {{/each}}
+
+    <a href="/posts/new" id="new-post-link" class="create-link">Ask a question</a>
+
+    <script>
+        if (!localStorage.getItem('authToken'))
+            document.getElementById('new-post-link').hidden = true;
+    </script>
+</div>

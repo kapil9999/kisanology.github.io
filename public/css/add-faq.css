@@ -1,0 +1,52 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.form-title {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.faq-form {
+	width: 80%;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+input[type="text"], textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+textarea {
+	height: 150px;
+}
+
+.submit-button {
+	display: block;
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.back-link {
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	color: blue;
+}

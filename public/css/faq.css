@@ -1,0 +1,38 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+
+.faqs-container{
+    width: 80%;
+    margin: auto;
+}
+
+.faq-title {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.faq {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.faq-question {
+	font-size: 20px;
+	margin-top: 0;
+}
+
+.faq-answer {
+	margin-bottom: 0;
+}
+
+.add-faq-link {
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	color: blue;
+}

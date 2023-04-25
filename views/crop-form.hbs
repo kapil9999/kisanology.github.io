@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Crop Data</title>
+	<link href="/css/crop-form.css" rel="stylesheet"/>
+</head>
+<body>
+	<h1>Add Crop Data</h1>
+	<form action="/crop-form" method="post" enctype="multipart/form-data">
+		<label for="plant_name">Plant Name:</label>
+		<input type="text" id="plant_name" name="plant_name">
+
+		<label for="short_info">Short Info:</label>
+		<textarea id="short_info" name="short_info"></textarea>
+
+		{{!-- <label for="avg_len">Average Length:</label>
+		<input type="text" id="avg_len" name="avg_len">
+
+		<label for="cultivation">Cultivation:</label>
+		<textarea id="cultivation" name="cultivation"></textarea>
+
+		<label for="diseases">Diseases:</label>
+		<textarea id="diseases" name="diseases"></textarea>
+
+		<label for="fertilizer">Fertilizer:</label>
+		<textarea id="fertilizer" name="fertilizer"></textarea>
+
+        <div>
+            <label for="is_it_creeper">Is it a Creeper:</label>
+            <input type="radio" id="creeper_yes" name="is_it_creeper" value="yes">
+            <label for="creeper_yes">Yes</label>
+            <input type="radio" id="creeper_no" name="is_it_creeper" value="no">
+            <label for="creeper_no">No</label>
+         </div>
+         
+		<label for="pesticides">Pesticides:</label>
+		<textarea id="pesticides" name="pesticides"></textarea>
+
+		<label for="pre_plant_process">Pre-Planting Process:</label>
+		<textarea id="pre_plant_process" name="pre_plant_process"></textarea>
+
+		<label for="plantation_process">Plantation Process:</label>
+		<textarea id="plantation_process" name="plantation_process"></textarea>
+
+		 <label for="time_span">Time Span:</label>
+		<input type="text" id="time_span" name="time_span">  --}}
+
+		<label for="image">Image:</label>
+		<input type="file" id="image" name="image">
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
+
+

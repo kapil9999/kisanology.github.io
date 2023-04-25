@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Crop Category</title>
+        <link href="/css/category-form.css" rel="stylesheet"/>
+
+    <body>
+        <form action="/create-crop-category" method="POST" enctype="multipart/form-data">
+            
+            <input type="text" id="crop" name="crop" hidden="true" value="{{cropId}}">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="short_info">Short Info:</label>
+            <textarea id="short_info" name="short_info" class="no-textarea" required></textarea>
+
+            <label for="avg_length">Avg Length:</label>
+            <input type="text" id="avg_length" name="avg_length" required>
+
+            <div>
+                <label>Is it creeper:</label>
+                <label><input type="checkbox" id="is_it_creeper" name="is_it_creeper" value="Yes"> Yes</label>
+                <label><input type="checkbox" id="is_it_creeper" name="is_it_creeper" value="No"> No</label>
+            </div>
+
+
+            <label for="land_preparation">Land Preparation:</label>
+            <textarea id="land_preparation" name="land_preparation" required></textarea>
+
+            <label for="seed_treatment">Seed Treatment:</label>
+            <textarea id="seed_treatment" name="seed_treatment" required></textarea>
+
+            <label for="sowing">Sowing:</label>
+            <textarea id="sowing" name="sowing" required></textarea>
+
+            <label for="irrigation">Irrigation:</label>
+            <textarea id="irrigation" name="irrigation" required></textarea>
+
+            <label for="fertilizer_application">Fertilizer Application:</label>
+            <textarea id="fertilizer_application" name="fertilizer_application" required></textarea>
+
+            <label for="weed_control">Weed Control:</label>
+            <textarea id="weed_control" name="weed_control" required></textarea>
+
+            <label for="pesticides">Pesticides:</label>
+            <textarea id="pesticides" name="pesticides" required></textarea>
+
+            <label for="diseases">Diseases:</label>
+            <textarea id="diseases" name="diseases" required></textarea>
+
+            <label for="harvesting">Harvesting:</label>
+            <textarea id="harvesting" name="harvesting" required></textarea>
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+         </form>
+
+    </body>
+</html>
